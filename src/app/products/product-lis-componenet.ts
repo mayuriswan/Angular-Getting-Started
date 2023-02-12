@@ -25,7 +25,10 @@ export class ProductListComponent implements OnInit{
       this._listFilter = value
       this.filterProducts = this.FilterProducts(value)
     }
-    
+    onRatingClicked(message: string): void {
+      console.log("world")
+      this.pageTitle = 'Product List: ' + message;
+    }
                 
     products : IProduct[] = [
         {
